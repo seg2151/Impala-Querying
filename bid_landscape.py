@@ -4,13 +4,13 @@ Created on Fri Dec 30 11:44:07 2016
 
 @author: sgarcia
 """
-filename = 'Krush.xlsx'
+filename = '.xlsx'
 from bid_landscape_sql_scripts import scripts
 import pandas as pd
 from impala.dbapi import connect
 from impala.util import as_pandas
 print('Connecting to host...')
-conn = connect(host = 'lga-impala.pulse.prod', port = 21050)
+conn = connect(host = '', port = 21050)
 cursor = conn.cursor()
 df_list = []
 for script in scripts:
